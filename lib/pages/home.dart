@@ -18,6 +18,18 @@ class _HomePageState extends State<HomePage> {
     return WillPopScope(
       onWillPop: () async => false,
       child: Scaffold(
+        //ヘッダーの追加
+        appBar: AppBar(
+          title: Text('Task', textAlign: TextAlign.center),//センタリング
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {
+                //検索アイコンのアクションを一旦定義せずに進めるのでここは空にしてあります
+              },
+            ),
+          ],
+        ),
           backgroundColor: Colors.white,
           body: SafeArea(
             child: Container(
