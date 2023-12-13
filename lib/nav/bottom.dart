@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pbl/pages/class.dart';
+import 'package:pbl/pages/home.dart';
 
 /// Flutter code sample for [NavigationBar].
 
@@ -45,45 +47,24 @@ class _NavigationExampleState extends State<NavigationExample> {
             label: 'Home',
           ),
           NavigationDestination(
-            icon: Badge(child: Icon(Icons.notifications_sharp)),
-            label: 'Notifications',
+            icon: Badge(
+              label: Text('2'),
+              child: Icon(Icons.school),
+            ),
+            label: 'Class',
           ),
           NavigationDestination(
             icon: Badge(
-              label: Text('2'),
-              child: Icon(Icons.messenger_sharp),
-            ),
-            label: 'Messages',
+              child: Icon(Icons.notifications_sharp)),
+            label: 'Notifications',
           ),
         ],
       ),
       body: <Widget>[
         /// Home page
-        Card(
-          shadowColor: Colors.transparent,
-          margin: const EdgeInsets.all(8.0),
-          child: SizedBox.expand(
-            child: Center(
-              child: Text(
-                '1',
-                style: theme.textTheme.titleLarge,
-              ),
-            ),
-          ),
-        ),
+        const HomePage(),
 
-        Card(
-          shadowColor: Colors.transparent,
-          margin: const EdgeInsets.all(8.0),
-          child: SizedBox.expand(
-            child: Center(
-              child: Text(
-                '2',
-                style: theme.textTheme.titleLarge,
-              ),
-            ),
-          ),
-        ),
+        const ClassPage(),
         Card(
           shadowColor: Colors.transparent,
           margin: const EdgeInsets.all(8.0),

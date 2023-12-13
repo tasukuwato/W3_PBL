@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:pbl/pages/home.dart';
+import 'package:pbl/nav/bottom.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -33,7 +33,7 @@ class PICTApp extends StatelessWidget {
       ),
       initialRoute: 'home',
       routes: {
-        'home': (context) => const HomePage(),
+        'home': (context) => const NavigationBarApp(),
       },
     );
   }
