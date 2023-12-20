@@ -49,13 +49,10 @@ class _HomePageState extends State<HomePage> {
                       return Card(
                         child: ListTile(
                           title: Text(tasks[index]),
-<<<<<<< Updated upstream
-=======
                           trailing: IconButton(
                             icon: Icon(Icons.check),
                             onPressed: () => _removeTask(index),
                           ),
->>>>>>> Stashed changes
                         ),
                       );
                     }
@@ -91,10 +88,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-<<<<<<< Updated upstream
   // タスク追加ダイアログを表示する関数
-=======
->>>>>>> Stashed changes
   Future<void> _displayTaskAddDialog(BuildContext context) async {
     String taskName = '';
     String taskDeadline = '';
@@ -142,13 +136,10 @@ class _HomePageState extends State<HomePage> {
         );
       });
   }
-<<<<<<< Updated upstream
-=======
 
   void _removeTask(int index) {
     setState(() {
       tasks.removeAt(index);
     });
   }
->>>>>>> Stashed changes
 }
