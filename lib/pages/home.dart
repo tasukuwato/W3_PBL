@@ -49,6 +49,10 @@ class _HomePageState extends State<HomePage> {
                       return Card(
                         child: ListTile(
                           title: Text(tasks[index]),
+                          trailing: IconButton(
+                            icon: Icon(Icons.check),
+                            onPressed: () => _removeTask(index),
+                          ),
                         ),
                       );
                     }
@@ -131,5 +135,11 @@ class _HomePageState extends State<HomePage> {
           ],
         );
       });
+  }
+
+  void _removeTask(int index) {
+    setState(() {
+      tasks.removeAt(index);
+    });
   }
 }
